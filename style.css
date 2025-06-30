@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Sriracha&display=swap');
 
+*{
+    font-family: raleway, sans-serif;
+}
 
 body {
   background-color: black;/*define toda a cor de fundo do body como preta*/
@@ -39,114 +42,121 @@ section {
 }
 
 .banner h1 {
-  font-size: 2.5rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: transparent;
-  background: -webkit-linear-gradient(#33A8DB, #1472B7);
-  background-clip: text;
-  -webkit-background-clip: text;
+  font-size: 2.5rem; /*estabelece o tamanho da fonte como sendi 2,5x o tamanho estabelecido pelo navegador utilizado*/
+  font-weight: 900; /*peso da fonte*/
+  text-transform: uppercase; /*coloca as letras para maiúscula*/
+  color: transparent; /*estabelece como transparente a cor das letras*/
+  background: linear-gradient(#33A8DB, #1472B7);  /*estabele um degradê como imagem de fundo que aparecerá apenas onde tem texto com os comandos abaixo*/
+  background-clip: text; /*necessário para garantir a compatibilidade abaixo*/
+  -webkit-background-clip: text; /*estabelece que o background (sua cor) só aparece onde tem texto. O prefixo -webkit- é para garantir a compatibilidade com navegadores baseados em webkit (chrome e safari)*/
 }
 
 .banner p {
-  font-size: 1.25rem;
-  margin: 16px 0 24px;
+  font-size: 1.25rem; /*estabelece tamanho da fonte com 1.25x o tamanho pré estabelecido pelo navegador*/
+  margin: 16px 0 24px; /*estabelece a margem superior com 16px, as laterais com 0px e a debaixo com 24px*/
 }
 
 .banner .logo {
-  background-color: rgba(0, 0, 0, .2);
-  height: 260px;
-  width: 260px;
-  margin: auto;
-  border-radius: 50%;
-  padding: 16px;
-  margin-bottom: 16px;
+  background-color: rgba(0, 0, 0, .2); /*cor de fundo preta com leve transparência*/
+  height: 260px; /*altura do container onde está a imagem logo*/
+  width: 260px; /*largura do container onde está a imagem logo, formando um quadrado*/
+  margin: auto; /*.logo se orienta centralmente no eixo horizontal em relação ao seu container*/
+  border-radius: 50%; /*estabelece a borda em formato de círculo*/
+  padding: 16px; /*espaço interno com 16px nos quatro lados*/
+  margin-bottom: 16px; /*margem inferior com 16px*/
 }
 
 .banner .logo img {
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  margin: auto; /*orienta a imagem no centro do container (.logo) horizontalmente*/
+  width: 100%; /*a largura da imagem é do tamanho da largura do container*/
+  height: 100%; /*a altura da imagem é do tamanho da largura do container*/
+  object-fit: contain; /*estabelece o comportamento da imagem: ela deverá se esticar para caber, ou reduzida/cortada para caber? No caso de contain, a imagem será encaixada no container mantendo ao máximo suas proporções*/
 }
 
 .banner .banner-content button {
-  color: #31A8DD;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 16px 32px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  background-color: transparent;
-  border-image: linear-gradient(#3BA1CD, #1572B7);
-  border-image-slice: 10;
-  border-radius: 30px;
+  color: #31A8DD; /*cor das letras do texto do botão*/
+  font-size: 1rem; /*estbelece que o tamanho de sua fonte será o mesmo que o estabelecido previamente no navegador utilizado*/
+  font-weight: bold; /*peso da fonte*/
+  padding: 16px 32px; /* espaço interno em cima e embaixo com 16px e 32px na lateral*/
+  text-transform: uppercase; /*transforma as letras para maiúsculas*/ 
+  letter-spacing: 4px; /*espaço entrea as letras do texto do botão de 4px*/
+  background-color: transparent; /*cor de fundo transparente (aparece a imagem que estar por trás)*/
+  border-image: linear-gradient(#3BA1CD, #1572B7); /*coloca degradê na borda*/
+  border-image-slice: 10; /*espalha a imagem criada na borda para o resto dela. O valor indica o quanto se espalha*/ 
 }
 
-#course-content {
-  width: 800px;
-  text-align: center;
+.banner .banner-content button:hover{
+    cursor: pointer; /*cursor em forma de apontador quando passar por cima do botão*/
 }
 
-#course-content .modules-list {
-  margin: 24px 0;
+#course-content { /*contém o conteúdo programático do curso*/
+  width: 800px; /*estabelece largura de 800px*/
+  text-align: center; /*centraliza o texto*/
 }
 
-#course-content .modules-list .module {
-  color: white;
-  width: 530px;
-  margin: 0 auto 24px;
-  border: 1px solid #33A8DB;
-  background-color: #252525;
-  padding: 16px;
-  border-radius: 100px;
-  box-shadow: inset -5px 6px 8px rgba(0, 0, 0, .7);
+#course-content .modules-list { /*contém os módulos*/
+  margin: 24px 0px; /*estabelece margem superior e inferior com 24px e 0px nas laterias*/
 }
 
-#course-content .modules-list .module span {
-  color: #33A8DB;
+#course-content .modules-list .module { /*edita os espaços onde estão especificados os módulos*/
+  color: white; /*cor branca para o texto nos .module*/
+  width: 530px; /*largura de cada .module*/
+  margin: 0 auto 24px; /*a margem auto nas laterais orientam .module centralmente no eixo horizontal em relação ao seu conteiner (module-list)*/
+  border: 1px solid #33A8DB; /*tamanho, tipo e cor da borda*/
+  background-color: #252525; /*cor de fundo dos .module*/
+  padding: 16px; /*espaço interno dos .modules*/
+  border-radius: 100px; /*arredondamento das bordas dos .module*/
+  box-shadow: inset -5px 6px 8px rgba(0, 0, 0, .7); /*sombra interna adicionada (inset)*/
 }
 
-#transform-world {
-  height: 560px;
-  background-size: cover;
-  background-image: url("assets/images/woman-code.png");
-  background-attachment: fixed;
-  border-top: 1px solid #33A8DB80;
-  border-bottom: 1px solid #33A8DB80;
-  padding: 200px;
+#course-content .modules-list .module span { /*delimitam uma parte específica do tempo, permitindo sua edição sem alterar o que está fora*/
+  color: #33A8DB; /*estabelece a cor da fonte desses trechos*/
 }
 
-#transform-world p {
-  font-weight: 900;
-  font-size: 2.5rem;
-  text-transform: lowercase;
-  max-width: 250px;
-  text-shadow: 3px 2px #33A8DB;
+#transform-world { /*seção de texto inserido junto com imagem*/
+    height: 560px; /*estabelece a largura desse seção*/
+    background-image: url("assets/images/woman-code.png"); /*acrescenta uma imagem de fundo nessa seção*/
+    background-size: cover; /*estabelece o tamanho da imagem de fundo. O cover assegura que a imagem ocupará todo o espaço de fundo, seja cortando, seja esticando a imagem*/
+    background-attachment: fixed; /*estabelece o comportamento da imagem diantda rolagem. No caso ela ficará fixa no mesmo lugar, independente da rolagem*/
+    border-top: 1px  solid #33A8DB80; /*cria uma borda na parte de cima*/
+    border-bottom: 1px solid #33A8DB80; /*cria uma borda na parte debaixo*/
+    padding: 200px; /*espaço interno de 200px. Isso estreita o espaço interno diante da tela, deixiando bem ao centro*/
 }
 
-#professional-challenges {
-  text-align: center;
-  width: 800px;
+#transform-world p { /*aborda apenas o parágrafo inserido nessa seção*/
+  font-weight: 900; /*estabelece o peso da fonte*/
+  font-size: 2.5rem; /*estabelece o tamanho de sua fonte*/
+  text-transform: lowercase; /*estabelece todas as letras como minúsculas*/
+  max-width: 250px; /*largura máxima que ocupará*/
+  text-shadow: 3px 2px #33A8DB; /*acrescenta sombra ao texto*/
+}
+
+#professional-challenges { /*contém h2, img e p*/
+  text-align: center; /*centraliza seu texto*/
+  width: 800px; /*estabelece a largura*/
 }
 
 #professional-challenges img {
-  margin: 32px 0;
+  margin: 32px 0; /*acrescenta margem superior e inferior de 32px e 0px nas laterais*/
 }
 
-footer {
-  padding: 60px 0;
-  text-align: center;
-  background-image: linear-gradient(rgba(50, 168, 219, .0), rgba(50, 168, 219, .2));
-  border-top: 1px solid #33A8DB80;
+#professional-challenges p{
+    text-align: center;
+}
+
+footer { /*contém img, p e uma âncora*/
+  padding: 60px 0; /*estabelece espaço interno em cima e embaixo de 60px e de 0px nas laterais*/
+  text-align: center; /*alinha o texto centralmente*/
+  background-image: linear-gradient(rgba(50, 168, 219, .0), rgba(50, 168, 219, .2)); /*estabelece um degradê como imagem de fundo*/
+  border-top: 1px solid #33A8DB80; /*estabelece uma borda na parte de cima e sua cor*/
 }
 
 footer .dio-logo {
-  width: 300px;
+  width: 300px; /*estabelece a largura da imagem em 300px*/
 }
 
 footer a {
-  color: #33A8DB;
-  font-weight: bold;
-  text-decoration: none;
+  color: #33A8DB; /*estbele e a cor do texto abrangido pela âncora*/
+  font-weight: bold; /*estabelece o peso de sua fonte*/
+  text-decoration: none; /*remove o sublinhado padrão das âncoras*/
 }
